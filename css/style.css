@@ -1,0 +1,392 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+.pagetop {
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  background: #fff;
+  border: solid 2px #000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.pagetop__arrow {
+  height: 10px;
+  width: 10px;
+  border-top: 3px solid #000;
+  border-right: 3px solid #000;
+  transform: translateY(20%) rotate(-45deg);
+}
+
+body {
+  color: #24292e;
+  letter-spacing: 0.05em;
+}
+
+a,
+a:visited {
+  color: #24292e;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 60px;
+  font-family: "Pacifico";
+}
+
+h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 65px;
+  padding: 0.8rem 0;
+  margin-bottom: 2rem;
+  background-image: linear-gradient(
+    90deg,
+    #121212 0 50px,
+    transparent 100px 60px,
+    #9a9a9a 0 60px
+  );
+  background-repeat: no-repeat;
+  background-size: 25% 3px;
+  background-position: bottom;
+  color: #353535;
+  font-weight: bold;
+  font-size: 26px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+section {
+  padding: 30px 10%;
+}
+
+/*--------------------
+        ヘッダー 
+ -------------------*/
+header {
+  max-width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 4%;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+header ul {
+  display: flex;
+}
+
+header li {
+  margin-left: 30px;
+}
+
+/*--------------------
+    メインビジュアル 
+ -------------------*/
+.main-visual {
+  width: 100%;
+  height: 550px;
+  background-image: url(../img/sky.jpg);
+  opacity: 1;
+  background-size: cover;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-visual p {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+/*--------------------
+        About 
+ -------------------*/
+#about h2 {
+  margin-top: 40px;
+}
+
+#about h3 {
+  margin-right: 10px;
+}
+
+#about p {
+  width: 80%;
+}
+
+#about img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border-style: solid;
+  border-width: 1px;
+}
+
+#about-name {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#about-detail {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/*--------------------
+        Skills 
+ -------------------*/
+#skills {
+  background-color: #f5f5f5;
+}
+
+#skills img {
+  max-width: 20%;
+}
+
+#skills h3 {
+  margin: 0 auto 0 0;
+  padding: 20px 0 0 0;
+}
+
+.skill-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.skill-titile {
+  display: flex;
+  padding-bottom: 20px;
+}
+
+.skill-item {
+  width: 30%;
+  background-color: #fff;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+/*--------------------
+        Works 
+ -------------------*/
+.work-item {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+#works img {
+  width: 50%;
+}
+
+.work-description {
+  margin-left: 10px;
+  width: 50%;
+}
+
+.work-description p {
+  margin-top: 10px;
+}
+
+/*--------------------
+        Contact 
+ -------------------*/
+#contact {
+  background-color: #e1eeee;
+}
+
+#contact form {
+  width: 70%;
+  margin: 0 auto;
+}
+
+#contact dl {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+#contact dt {
+  width: 15%;
+  font-size: 13px;
+}
+
+#contact dd {
+  width: 85%;
+  margin-bottom: 10px;
+}
+
+#contact dd input,
+#contact dd textarea {
+  width: 100%;
+  border: solid 1px #999999;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+#contact dd textarea {
+  height: 10rem;
+}
+
+#contact .button {
+  text-align: center;
+}
+
+#contact .button input {
+  width: 200px;
+  background-color: #24292e;
+  color: #fff;
+  padding: 15px 0;
+  border: solid 1px #24292e;
+  border-radius: 8px;
+}
+
+#contact .button input:hover {
+  background: #24292e9d;
+  color: #fff;
+}
+
+/*--------------------
+        フッター 
+ -------------------*/
+footer {
+  background-color: #24292e;
+  color: #fff;
+  font-size: 0.5rem;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+/*--------------------
+    メディアクエリ 
+ -------------------*/
+@media screen and (max-width: 414px) {
+  h2 {
+    margin-bottom: 30px;
+  }
+
+  /*--------------------
+            ヘッダー 
+    --------------------*/
+  header {
+    max-width: 100%;
+    flex-direction: column;
+    height: auto;
+    padding: 10px 4%;
+  }
+
+  /*--------------------
+            About
+    --------------------*/
+  #about {
+    text-align: center;
+  }
+
+  #about h3 {
+    margin: 0;
+  }
+
+  #about-name {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #about-detail {
+    flex-direction: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  #about-detail p {
+    text-align: left;
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  /*--------------------
+            Skills
+    --------------------*/
+  .skill-item {
+    width: 100%;
+  }
+
+  /*--------------------
+            Works
+    --------------------*/
+  .work-item {
+    flex-direction: column;
+  }
+
+  #works img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .work-description {
+    width: 100%;
+  }
+
+  /*--------------------
+            Contact
+    --------------------*/
+  #contact form {
+    text-align: center;
+  }
+
+  #contact input {
+    width: 100%;
+  }
+
+  #contact dl {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #contact dt {
+    width: auto;
+    margin-bottom: 5px;
+  }
+
+  #contact dd {
+    width: 90%;
+  }
+}

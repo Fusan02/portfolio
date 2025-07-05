@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Futoshi's Portfolio</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="/scripts/scripts.js"></script>
+  </head>
+
+  <body>
+    <!-- ヘッダー -->
+    <header>
+      <a href="index.html">Futoshi's works</a>
+      <a class="pagetop" href="#">
+        <div class="pagetop__arrow"></div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- メインビジュアル -->
+    <div class="main-visual">
+      <div>
+        <h1>Futoshi's portfolio site</h1>
+      </div>
+    </div>
+    <main>
+      <!-- About -->
+      <section id="about">
+        <h2>About</h2>
+        <div id="about-name">
+          <h3>フトシ</h3>
+          <p>Futoshi</p>
+        </div>
+        <div id="about-detail">
+          <p>
+            新潟大学院の情報系に通う大学院生。
+            学部時代は1年生から4年生まで情報分野の基礎を幅広く学習。
+            プログラミング演習の授業では、プログラミングに強く没入すことはなかった。
+            <br />
+            自分で制作物を作るようになったのは3年生のときに、知人の紹介で参加したオンラインのプログラミングスクール。
+            そこで初めてWebアプリケーションの制作に取り組み、仕組みを理解しながら自分で手を動かすことの面白さを実感した。
+            仕組みを知るだけでなく、実際に自分で試してみることの重要性を強く感じ、以降は個人でもWeb開発やツール制作に取り組んでいる。
+            <br />
+            <br />
+            趣味はアニメ鑑賞とマーベル作品（MCU）。
+          </p>
+          <img src="./img/hackerman.png" />
+        </div>
+      </section>
+      <!-- Skills -->
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="skill-list">
+          <div class="skill-item">
+            <div class="skill-titile">
+              <h3>HTML / CSS</h3>
+              <img src="./img/htmlpic.png" />
+              <img src="./img/csspic.png" />
+            </div>
+            <p>
+              大学の講義では習わないため、学習サイト等で学び
+              ポートフォリオサイトを作成しました。
+            </p>
+          </div>
+          <div class="skill-item">
+            <div class="skill-titile">
+              <h3>JavaScript</h3>
+              <img src="./img/js.png" />
+            </div>
+            <p>フロントサイドでは、動きのある動作を作るために使用しました。</p>
+            <br />
+            <h3>おみくじ</h3>
+            <p>あなたの運勢は<span id="result">●●●</span>です^_^</p>
+            <button onclick="Omikuji();">おみくじを引く</button>
+          </div>
+          <div class="skill-item">
+            <div class="skill-titile">
+              <h3>React / Node.js</h3>
+              <img src="./img/react.png" />
+              <img src="./img/node-js.png" />
+            </div>
+            <p>
+              ToDoアプリを開発するときにReactを使って作成してみました。 Node.js
+              は、ビルドに使用したことがあります。
+            </p>
+          </div>
+          <div class="skill-item">
+            <div class="skill-titile">
+              <h3>PHP</h3>
+              <img src="./img/phppic.png" />
+            </div>
+            <p>
+              掲示板アプリを作成する際に、データベースを操作するために
+              PHPを用いて作成しました。
+            </p>
+          </div>
+          <div class="skill-item">
+            <div class="skill-titile">
+              <h3>MySQL</h3>
+              <img src="./img/mysql.png" />
+            </div>
+            <p>
+              簡単なSQL文が書けます。PostgreSQL
+              等の他のデータベースも挑戦しようと思っています。
+            </p>
+          </div>
+          <div class="skill-item">
+            <div class="skill-titile">
+              <h3>C</h3>
+              <img src="./img/C.png" />
+            </div>
+            <p>
+              コンパイラの授業で学んだことを実際体験してみたく、
+              とあるサイトを参考にC言語コンパイラを作成中
+              C言語はプログラムがどうして動くかの仕組みを知りたいと思う
+              きっかけになった。
+            </p>
+          </div>
+          <div class="skill-item">
+            <div class="skill-titile">
+              <h3>Python</h3>
+              <img src="./img/python.png" />
+            </div>
+            <p>
+              授業でデータサイエンスを行うときに何度も利用した。
+              文法が単純かつ読みやすくライブラリも豊富であるため
+              好んで使っている。
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Works -->
+      <section id="works">
+        <h2>Works</h2>
+        <div class="work-item">
+          <img src="./img/work1.png" />
+          <div class="work-description">
+            <h3>ポートフォリオサイト</h3>
+            <p>
+              現在表示しているサイトです。
+              学習サイトを参考にしながら、制作しました。 初めて自分の手で
+              Webページを作成しました。
+              <br />
+              Webページは自分のイメージを落と仕込む自由度が高いため楽しく作成できました。
+            </p>
+          </div>
+        </div>
+        <div class="work-item">
+          <img src="./img/work2.png" />
+          <div class="work-description">
+            <h3>掲示板アプリ</h3>
+            <p>
+              PHPを用いて作成した掲示板アプリです。
+              学習サイトを参考にしながら、制作しました。
+              <br />
+              データベースとの通信や、条件に対応したエラーの出力、データベース設計の考え方を
+              学ぶことができかつ同時に実装も行い体感することができたため、とても成長を実感しました。
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Contact -->
+      <section id="contact">
+        <h2>Contact</h2>
+        <form
+          action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSct9pdVp6yu2qgcpeEctYOLsiS_l9IX0n_tisP8upX47O0-2w/formResponse"
+          target="_self"
+          method="POST"
+          id="mG61Hd"
+        >
+          <dl>
+            <dt>お名前</dt>
+            <dd>
+              <input
+                name="entry.1702383284"
+                type="text"
+                required="required"
+                class="g_form"
+                id="textfield"
+              />
+            </dd>
+            <dt>メールアドレス</dt>
+            <dd>
+              <input
+                name="entry.1737875160"
+                type="text"
+                class="g_form"
+                id="textfield2"
+              />
+            </dd>
+            <dt>問い合わせ内容</dt>
+            <dd>
+              <textarea
+                name="entry.826438133"
+                required
+                class="g_form_text"
+                id="entry.826438133"
+              ></textarea>
+            </dd>
+          </dl>
+          <div class="button"><input type="submit" class="btbt" /></div>
+        </form>
+      </section>
+    </main>
+    <!-- フッター -->
+    <footer>
+      <p>&copy; 2025 Fusan.</p>
+    </footer>
+  </body>
+</html>
