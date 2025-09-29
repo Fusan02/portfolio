@@ -57,13 +57,23 @@ p {
 
 h1 {
   font-size: 60px;
-  font-family: "Pacifico";
+  font-family: "Display";
+  text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000,
+    -2px 0 0 #000,
+    2px 0 0 #000,
+    0 -2px 0 #000,
+    0 2px 0 #000;
 }
 
 h2 {
   font-size: 1.5rem;
+  font-weight: bold;
+  color: #353535;
   text-align: center;
-  margin-bottom: 65px;
   padding: 0.8rem 0;
   margin-bottom: 2rem;
   background-image: linear-gradient(
@@ -74,14 +84,21 @@ h2 {
   );
   background-repeat: no-repeat;
   background-size: 25% 3px;
-  background-position: bottom;
-  color: #353535;
-  font-weight: bold;
-  font-size: 26px;
+  background-position: bottom;  
 }
 
 h3 {
   font-size: 16px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  background-color:#e1eeee;
+  padding: 3px 20px;
+  width: fit-content;
 }
 
 section {
@@ -101,6 +118,7 @@ header {
   align-items: center;
   position: sticky;
   top: 0;
+  z-index: 2;
 }
 
 header ul {
@@ -117,10 +135,10 @@ header li {
 .main-visual {
   width: 100%;
   height: 550px;
-  background-image: url(../img/sky.jpg);
+  background-image: url(../img/blue-paper.jpeg);
   opacity: 1;
   background-size: cover;
-  color: #ffffff;
+  color: #31e4ff;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -205,26 +223,180 @@ header li {
   box-sizing: border-box;
 }
 
+.skill-link {
+  opacity: 0.8;
+  font-size: 12px;
+  text-decoration: underline;
+}
+
 /*--------------------
-        Works 
+        Works
  -------------------*/
+#works {
+  display: flex;
+  flex-direction: column;
+}
+
+.toggle-works-btn {
+  margin-top: 30px;
+  margin-bottom: 5px;
+  width: fit-content;
+}
+
 .work-item {
   display: flex;
   justify-content: space-between;
-  margin-top: 30px;
+  margin-top: 5px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e0e0e0;
+  position: relative;  /* copyRightの基準点 */
 }
 
-#works img {
+.work-images {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.work-images img {
+  width: 100%;
+  border: 1px solid #333;
+}
+
+.rowImg {
+  display: flex;
+  flex-direction: row;
   width: 50%;
 }
 
 .work-description {
-  margin-left: 10px;
+  margin-left: 20px;
   width: 50%;
+}
+
+.work-description h3 {
+  padding: 0.25em 0.5em;
+  color: #494949;
+  background: #eaf3ff;
+  border-left: solid 5px #7db4e6;
 }
 
 .work-description p {
   margin-top: 10px;
+}
+
+.work-description h5 {
+  margin-top: 10px;
+}
+
+.copyRight {
+  position: absolute;
+  right: 0px;
+  bottom: 30px;
+  font-size: 16px;
+  color: black;
+}
+
+.toggle-works-btn {
+  display: block;
+  cursor: pointer;
+	text-decoration: none;
+	width: fit-content;
+	padding: 0.1rem 0.3rem;
+	font-size: 12px;
+	font-weight: normal;
+	border: 1px solid #d0d0d0;
+	color: #999;
+	background: transparent;
+  margin-bottom: 30px;
+  opacity: 0.7;
+}
+
+.toggle-works-btn:hover {
+	color: #666;
+	background: #f5f5f5;
+	opacity: 1;
+}
+
+.numbered-list li {
+  list-style: decimal;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+.pointer-list li {
+  list-style: disc;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+.Text-Box {
+  margin-bottom: 40px;
+}
+
+.image-container {
+  position: relative;
+}
+
+.rowContents {
+  display: flex;
+  flex-direction: row;
+}
+
+.toggle-highlights-btn {
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+  width: fit-content;
+  padding: 0.1rem 0.3rem;
+  font-size: 12px;
+  font-weight: normal;
+  border: 1px solid #d0d0d0;
+  color: #999;
+  background: transparent;
+  margin-left: auto;
+  opacity: 0.7;
+}
+
+.toggle-highlights-btn:hover {
+  color: #666;
+  background: #f5f5f5;
+  opacity: 1;
+}
+
+.highlight-sideButton {
+  position: absolute;
+  top: 12%;
+  left: 82%;
+  width: 16%;
+  height: 58%;
+  border: 4px solid red;
+  pointer-events: none;
+}
+
+.highlight-events {
+  position: absolute;
+  top: 75%;
+  left: 0%;
+  width: 25%;
+  height: 21%;
+  border: 4px solid red;
+  pointer-events: none;
+}
+
+.highlight-character {
+  position: absolute;
+  top: 18%;
+  left: 12%;
+  width: 36%;
+  height: 78%;
+  border: 4px solid red;
+  pointer-events: none;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 /*--------------------
@@ -300,7 +472,7 @@ footer {
 /*--------------------
     メディアクエリ 
  -------------------*/
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 430px) {
   h2 {
     margin-bottom: 30px;
   }
@@ -357,13 +529,14 @@ footer {
     flex-direction: column;
   }
 
-  #works img {
-    width: 100%;
-    margin-bottom: 10px;
-  }
+  .work-images {
+  width: 100%;
+  margin-bottom: 10px;
+}
 
   .work-description {
     width: 100%;
+    margin-left: 0px;
   }
 
   /*--------------------

@@ -7,7 +7,7 @@
     <title>Futoshi's Portfolio</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="./scripts/scripts.js"></script>
+    <script src="./scripts/scripts.js" defer></script>
   </head>
 
   <body>
@@ -29,7 +29,7 @@
     <!-- メインビジュアル -->
     <div class="main-visual">
       <div>
-        <h1>Futoshi's portfolio site</h1>
+        <h1>Futoshi's Portfolio Site</h1>
       </div>
     </div>
     <main>
@@ -52,6 +52,8 @@
             <br />
             <br />
             趣味はアニメ鑑賞とマーベル作品（MCU）。
+            <br />
+            最近はハンターハンターとLOL(League of Legends)にハマっている...（ジンクスが好き）
           </p>
           <img src="./img/hackerman.png" />
         </div>
@@ -84,14 +86,23 @@
           </div>
           <div class="skill-item">
             <div class="skill-titile">
-              <h3>React / Node.js</h3>
+              <h3>React / Next.js</h3>
               <img src="./img/react.png" />
-              <img src="./img/node-js.png" />
+              <img src="./img/Nextjs.png" />
             </div>
             <p>
-              ToDoアプリを開発するときにReactを使って作成してみました。 Node.js
-              は、ビルドに使用したことがあります。
+              Reactは個人で学習中です。
+              <br />
+              個人で開発しているものは基本的にReactのフレームワークであるNext.jsで作成しています。
+              また、Reactを用いてゲーム会社のインターンで作品を作成したことがあります。
             </p>
+            <br />
+            <nav>
+              <ul>
+                <li><a href="#work_3"><p class="skill-link">個人開発の作品はこちら</p></a></li>
+                <li><a href="#work_5"><p class="skill-link">(株)f4samuraiでのインターン作品はこちら</p></a></li>
+              </ul>
+            </nav>
           </div>
           <div class="skill-item">
             <div class="skill-titile">
@@ -109,10 +120,10 @@
               <img src="./img/C.png" />
             </div>
             <p>
-              コンパイラの授業で学んだことを実際体験してみたく、
-              とあるサイトを参考にC言語コンパイラを作成中
+              コンパイラの授業で学んだことを実際に体験してみたくて、
+              とあるサイトを参考にC言語でC言語コンパイラの作成に挑戦しました。（未完成）
               C言語はプログラムがどうして動くかの仕組みを知りたいと思う
-              きっかけになった。
+              きっかけになりました。
             </p>
           </div>
           <div class="skill-item">
@@ -151,10 +162,14 @@
       <!-- Works -->
       <section id="works">
         <h2>Works</h2>
-        <div class="work-item">
-          <img src="./img/work1.png" />
+        <button class="toggle-works-btn" data-target="1"></button>
+        <div id="work_1" class="work-item">
+          <div class="work-images">
+            <img src="./img/work1.png" />
+          </div>
           <div class="work-description">
             <h3>ポートフォリオサイト</h3>
+            <h5>概要</h5>
             <p>
               現在表示しているサイトです。
               学習サイトを参考にしながら、制作しました。 初めて自分の手で
@@ -164,10 +179,14 @@
             </p>
           </div>
         </div>
-        <div class="work-item">
-          <img src="./img/work2.png" />
+        <button class="toggle-works-btn" data-target="2"></button>
+        <div id="work_2" class="work-item">
+          <div class="work-images">
+            <img src="./img/work2.png" />
+          </div>
           <div class="work-description">
             <h3>掲示板アプリ</h3>
+            <h5>概要</h5>
             <p>
               PHPを用いて作成した掲示板アプリです。
               学習サイトを参考にしながら、制作しました。
@@ -177,29 +196,191 @@
             </p>
           </div>
         </div>
-        <div class="work-item">
-          <img src="./img/work3.png" />
+        <button class="toggle-works-btn" data-target="3"></button>
+        <div id="work_3"  class="work-item">
+          <div class="work-images">
+            <img src="./img/work3-1.png" />
+            <img src="./img/work3-2.png" />
+            <img src="./img/work3-3.png" />
+          </div>
           <div class="work-description">
-            <h3>ToDoアプリ</h3>
-            <p>
-              Reactを用いて作成したToDOアプリです。
+            <h3>ポータルサイト</h3>
+            <div class="Text-Box">
+            <h5>概要</h5>
+              <p>
+                Next.js + Supabaseで作成しているポータルサイトです。
+                <br />
+                現在も開発中で、様々なサービスを思いつきで作成しており、作ってみたいアニメーションを入れたり、学習と趣味の一石二鳥の開発サイトとして取り組んでいます。
+              </p>
+            </div>
+            <div class="Text-Box">
+              <h5>利用可能サービス</h5>
+              <p>・猫画像ジェネレーター</p>
+              <p>・ToDoアプリ（開発中）</p>
+            </div>
+            <div class="Text-Box">
+              <h5>サイトへのリンク</h5>
               <br />
-              とても簡易的なものを作成しました。
-              できることは、タスクの追加、完了したかの判定、タスクの削除などです。
-            </p>
+              <a href="https://todoapp-nextjs-two.vercel.app/" class="underline">todoapp-nextjs-two.vercel.app</a>
+              <p>実際にアカウントをメールアドレスから登録可能ですが、リンク先のログイン画面で"Click to Try"ボタンをクリックするとお試しアカウントが利用できます。</p>
+            </div>
+            <div class="Text-Box">
+              <h5>使用技術</h5>
+              <p>***</p>
+            </div>
           </div>
         </div>
-        <div class="work-item">
-          <img src="./img/work4.png" />
+        <button class="toggle-works-btn" data-target="4"></button>
+        <div id="work_4"  class="work-item">
+          <div class="work-images">
+            <h4>【 作成した画面 】</h4>
+            <img src="./img/work4-1.png" />
+            <img src="./img/work4-2.png" />
+            <h4>【 担当箇所 】</h4>
+            <div class="rowImg">
+              <img src="./img/work4-4.png" />
+              <img src="./img/work4-5.png" />
+            </div>
+            <img src="./img/work4-3.png" />
+          </div>
           <div class="work-description">
-            <h3>POTORINK</h3>
-            <p>
-              React + Ruby on Rails + PostgreSQLの環境で作成したポートフォリオ共有サービスです。
+            <div class="Text-Box">
+              <h3>POTOLINK ― ポートフォリオ共有サイト</h3>
+              <h5>概要</h5>
+              <p>
+                POTOLINKは、【技育CAMP2025】ハッカソン Vol.8で作成した作品です。
+                この作品はポートフォリオをより活用できる場を目指して開発した、ポートフォリオ共有プラットフォームです。
+                <br />
+                Docker 環境上で構築し、フロントエンドには React、バックエンドには Ruby on Rails を採用しました。
+                <br />
+                このサイトでは、誰でも自分のポートフォリオを公開・共有でき、閲覧する側は気になった制作者とコンタクトを取ることができます。
+                コメント機能や連絡先の共有を通じて、ポートフォリオをきっかけにした新たなつながりを生み出すことを目的としています。
+              </p>
+              <p>
+                主な特徴（3つの機能）
+              </p>
               <br />
-              ハッカソンの作品として作成しました。
-              私は認証周りのバックエンドとフロントエンドの作成と、投稿されたポートフォリオに対して
-              コメントを追加できる機能の作成を担当しました。
-            </p>
+              <ol class="numbered-list">
+                <li>
+                  <strong>魅せる</strong>
+                  <p>自分のポートフォリオをアップロードし、公開することで幅広い人にアピールできます。</p>
+                </li>
+                <br />
+                <li>
+                  <strong>創る</strong>
+                  <p>サイト上で用意されたテンプレートを利用し、簡単にポートフォリオを作成することができます。</p>
+                </li>
+                <br />
+                <li>
+                  <strong>繋がる</strong>
+                  <p>公開されているポートフォリオを閲覧し、気になる作品に「いいね」やコメントを残すことで制作者と交流できます。</p>
+                </li>
+              </ol>
+              <p>
+                今回のハッカソン開発では、最終的なデプロイには至らなかったものの、「魅せる」「創る」「繋がる」を一体化した新しいポートフォリオ活用の形を提案しました。
+              </p>
+            </div>
+            <div class="Text-Box">
+              <h5>担当箇所</h5>
+              <p>
+                本プロジェクトでは、バックエンド開発を中心に担当しました。Ruby on Rails を用いて以下の機能を実装しました。
+              </p>
+              <br />
+              <ul class="pointer-list">
+                <li>
+                  <strong>ユーザー認証機能</strong>
+                  <p>チームメンバーが作成したモデルを活用し、ユーザーの新規登録およびログイン機能を実装しました。これにより、ユーザーが自身のアカウントを作成し、安全にサイトへアクセスできる仕組みを構築しました。</p>
+                </li>
+                <br />
+                <li>
+                  <strong>コメント機能</strong>
+                  <p>公開されたポートフォリオに対して、閲覧者がコメントを投稿できる機能を開発しました。これにより、ポートフォリオを通じた双方向のコミュニケーションを可能にし、利用者同士の交流を促進しました。</p>
+                </li>
+              </ul>
+            </div>
+            <div class="Text-Box">
+              <h5>工夫したところ</h5>
+              <p>
+                本プロジェクトでは、バックエンド開発やチーム開発の経験がほとんどなかったため、
+                AIを活用して学習しながら実装を進めた点が工夫の一つです。
+                初めてのチーム開発では、最終的にコードをマージする際に多くのコンフリクトが発生しましたが、
+                その都度「どのコードが必要で、どの部分を削除すべきか」をチームで議論しながら解決しました。
+                <br />
+                この取り組みによって、Git によるバージョン管理やコンフリクト解消の理解が大きく深まり、
+                チーム開発を円滑に進めるための協働スキルも身につけることができたと実感しています。
+              </p>
+            </div>
+          </div>
+        </div>
+        <button class="toggle-works-btn" data-target="5"></button>
+        <div id="work_5"  class="work-item">
+          <div class="work-images">
+            <div class="rowContents">
+              <h4>【 作成した画面 】</h4>
+              <button class="toggle-highlights-btn">担当箇所を非表示</button>
+            </div>
+            <div class="image-container">
+              <img src="./img/work5-1.png" />
+              <div class="highlight-sideButton"></div>
+              <div class="highlight-events"></div>
+              <div class="highlight-character"></div>
+            </div>
+            <img src="./img/work5-2.png" />
+            <h4>【 作成したアニメーション 】</h4>
+            <video src="./videos/video_work5-1.mp4" controls></video>
+            <h4>【 キャラクターとセリフの切り替え 】</h4>
+            <video src="./videos/video_work5-2.mov" controls></video>
+          </div>
+          <div class="work-description">
+            <h3>f4samurai インターンシップ制作物</h3>
+            <div class="Text-Box">
+              <h5>概要</h5>
+              <p>
+                9/4~9/5で行われたf4samuraiのサマーインターンシップに参加し、「コードギアス反逆のルルーシュ ロストストーリーズ」のアウトゲームのUIを二人一組で実装しました。
+              </p>
+            </div>
+            <div class="Text-Box">
+              <h5>担当箇所</h5>
+              <p>
+                私が作成を担当した箇所は"【 作成した画面 】"の赤い枠線で囲われているUIコンポーネント部分と、右上のメニューボタンを押した時に表示されるメニューモーダルの部分です。
+                <br />
+                他にも、"【 作成したアニメーション 】"では、メニューボタンを押下した時にアニメーション付きでメニューモーダルが表示される部分と、"【 キャラクターとセリフの切り替え 】"では、キャラクターを押下した時、セリフを押下したときで動画のような処理が発生する部分も担当しました。
+              </p>
+            </div>
+            <div class="Text-Box">
+              <h5>工夫したところ</h5>
+              <br />
+              <h4>UI部分</h4>
+              <ul class="pointer-list">
+                <li>
+                  <p>ホーム画面に映るUIコンポーネントを大きな単位で分割したうえで、さらに小さな単位に分けて実装を行い、再利用性と見通しのよいコード構造を意識しました。</p>
+                </li>
+                <li>
+                  <p>作業はFigmaの実装例を参考に進め、ボタン間の距離や配置などを忠実に再現するように心がけ、デザインと実装の違いを最小限に抑えました。</p>
+                </li>
+                <li>
+                  <p>実際のゲームと同じようなメニューモーダルを表示するアニメーション(【 作成したアニメーション 】)を追加した。</p>
+                </li>
+                <li>
+                  <p>提供された素材を最大限活かすために、キャラクター名を押すとキャラクターを切り替えられるように工夫したほか、画面をタップするとキャラクターのセリフが変化する仕様を組み込み、インタラクティブ性を高めました。</p>
+                </li>                                                
+              </ul>                
+              <br />
+              <h4>チーム開発部分</h4>
+              <ul class="pointer-list">
+                <li>
+                  <p>二人一組での作業だったので、常に相手の進捗を把握しながら進めることを意識し、コードのマージ時にも大きな衝突を避けてスムーズに作業を進行できた。</p>
+                </li>
+                <li>
+                  <p>初日に「何を実装するか」、翌日に「どこまで仕上げるか」といったステップを事前に計画し、同じペースで開発を進めることで、互いのコード内容を理解しやすくし、効率的な分担が実現できた。</p>
+                </li>                                          
+              </ul> 
+            </div>
+            <div class="copyRight">
+              ©S/PLG CD©CLAMP・ST
+              <br />
+              ©2019 EXNOA LLC・f4samurai
+            </div>
           </div>
         </div>
       </section>
